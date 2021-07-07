@@ -1,5 +1,7 @@
 package vehicles;//model, noOfDoors, noOfWheels, colour, age, runs, billAmount
 
+import java.util.ArrayList;
+
 public class Vehicle {
 
 	private String make_model;
@@ -8,11 +10,13 @@ public class Vehicle {
 	private String colour;
 	private int age;
 	private boolean runs;
-	private int baseBill;
-	private int hoursOfWork;
+	public int baseBill;
+	public int hoursOfWork;
 	public Object car;
 	public Object motorbike;
 	public Object truck;
+
+	public ArrayList<Vehicle> vehicles = new ArrayList<>();
 
 	public Vehicle(String make_model, int noOfDoors, int noOfWheels, String colour, int age, boolean runs, int baseBill,
 			int hoursOfWork) {

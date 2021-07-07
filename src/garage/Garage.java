@@ -13,46 +13,37 @@ public class Garage {
 	public static int bike;
 	public static int truck;
 	public static int hoursOfWork;
-	public static int totalBill;
+	public static double totalBill;
+	public static int baseBill;
 
-	public ArrayList<Vehicle> vehicles = new ArrayList<>();
+	public ArrayList<Vehicle> vehicles;
 
 	public double totalBill() {
 		double bill = 0.0;
-		for (Vehicle vehicles : this.vehicles)
+		ArrayList<Vehicle> vehicles = this.vehicles;
+		for (int i = 0; i < vehicles.size(); i++) {
+			vehicles.get(i);
 			;
+		}
 		;
 		{
-			bill += car + hoursOfWork;
+			bill += baseBill + hoursOfWork;
 		}
 		return bill;
 	}
 
-	public static int totalBillCar() {
-		totalBill = car + hoursOfWork;
-		return totalBill;
-
-	}
-
-	public static int totalBillBike() {
-		totalBill = bike + hoursOfWork;
-		return totalBill;
-	}
-
-	public static int totalBillTruck() {
-		totalBill = truck + hoursOfWork;
-		return totalBill;
-	}
-
 	public void addCar(Car car) {
+		return;
 
 	}
 
 	public void addBike(Motorbike bike) {
+		return;
 
 	}
 
 	public void addTruck(Truck truck) {
+		return;
 
 	}
 

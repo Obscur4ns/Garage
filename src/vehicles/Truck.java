@@ -6,4 +6,14 @@ public class Truck extends Vehicle {
 			int hoursOfWork) {
 		super(make_model, noOfDoors, noOfWheels, colour, age, runs, baseBill, hoursOfWork);
 	}
+
+	@Override
+	public int getBaseBill() {
+		return baseBill;
+	}
+
+	@Override
+	public int getHoursOfWork() {
+		return hoursOfWork;
+	}
 }
