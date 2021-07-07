@@ -2,60 +2,34 @@ package garage;
 
 import java.util.ArrayList;
 
-import vehicles.Car;
-import vehicles.Motorbike;
-import vehicles.Truck;
 import vehicles.Vehicle;
 
 public class Garage {
 
-	public static int car;
-	public static int bike;
-	public static int truck;
-	public static int hoursOfWork;
-	public static double totalBill;
-	public static int baseBill;
-
-	public ArrayList<Vehicle> vehicles;
+	public ArrayList<Vehicle> vehicles; // does not like without
 
 	public double totalBill() {
-		double bill = 0.0;
-		ArrayList<Vehicle> vehicles = this.vehicles;
-		for (int i = 0; i < vehicles.size(); i++) {
-			vehicles.get(i);
-			;
+		double totalBill = 0.0;
+		ArrayList<Vehicle> vehicles = this.vehicles; // does not like without this.vehicles either, causes lines 14, 26,
+														// 31 to error
+		for (Vehicle v : vehicles) {
+			if (v.getClass().getSimpleName().equals("Car"))
+				if (v.getClass().getSimpleName().equals("Motorbike"))
+					if (v.getClass().getSimpleName().equals("Truck"))
+						totalBill += v.baseBill + v.hoursOfWork;
+
 		}
-		;
-		{
-			bill += baseBill + hoursOfWork;
-		}
-		return bill;
-	}
-
-	public void addCar(Car car) {
-		return;
+		return totalBill;
 
 	}
 
-	public void addBike(Motorbike bike) {
-		return;
+	public void addVehicle(Vehicle vehicles) {
+		this.vehicles.add(vehicles);
 
 	}
 
-	public void addTruck(Truck truck) {
-		return;
-
+	public void removeVehicle(Vehicle vehicles) {
+		this.vehicles.remove(vehicles);
 	}
 
-	public void removeTruck(Truck truck) {
-
-	}
-
-	public void removeBike(Motorbike bike) {
-
-	}
-
-	public void removeCar(Car car) {
-
-	}
 }

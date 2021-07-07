@@ -1,4 +1,4 @@
-package vehicles;//model, noOfDoors, noOfWheels, colour, age, runs, baseBill
+package vehicles;
 
 public class Truck extends Vehicle {
 
